@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import patientOperation.model.Operation;
 import patientOperation.model.Patient;
@@ -34,6 +34,10 @@ public class Main extends Application {
         return dataAccessor.getPatientList();
     }
 
+    public ObservableList<String> getDiseasesList() throws Exception {
+        return dataAccessor.getDisesesList();
+    }
+
     public ObservableList<Operation> getOperationData(Patient patient) throws Exception {
         return dataAccessor.getOperationList(patient);
     }
@@ -44,6 +48,14 @@ public class Main extends Application {
 
     public void removeOperation(Integer deletedId) throws SQLException {
         dataAccessor.removeOperation( deletedId );
+    }
+
+    public void addPatient(Patient newPatient) throws SQLException {
+        dataAccessor.addPatient(newPatient);
+    }
+
+    public void addOperation(Operation newOperation, Patient patient) throws SQLException {
+        dataAccessor.addOperation(newOperation, patient);
     }
 
     @Override
@@ -84,13 +96,13 @@ public class Main extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("PatientOverview.fxml"));
+            loader.setLocation(Main.class.getResource("OperationOverview.fxml"));
             AnchorPane patientOverview = loader.load(); //(AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
             rootLayout.setCenter(patientOverview);
 
-            PatientOverviewController controller = loader.getController();
+            OperationOverviewController controller = loader.getController();
             controller.setMainApp(this);
 
         } catch (IOException e) {
@@ -105,6 +117,61 @@ public class Main extends Application {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
+
+    public boolean showPatientEditDetail(Patient patient) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("PatientEditDialog.fxml"));
+            AnchorPane page = loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Edycja pacjenta");
+
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            PatientEditController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setPatient(patient);
+
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean showOperationEditDetail(Operation operation) throws SQLException, Exception {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("OperationEditDialog.fxml"));
+            AnchorPane page = loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Edycja operacji");
+
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            OperationEditController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setOperation(operation, this);
+
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 
     public static void main(String[] args) {
         launch(args);

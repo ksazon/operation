@@ -59,7 +59,7 @@ public class DataAccessor {
     }
 
     public ObservableList<Operation> getOperationList(Patient patient) throws SQLException {
-        String p = "SELECT * FROM ebdb.patient_operation JOIN" +
+        String p = "SELECT * FROM ebdb.patient_operation LEFT OUTER JOIN" +
                 " ebdb.operation ON operation.diseaseName = patient_operation.diseaseName WHERE patient_operation.PESEL = ?";
         PreparedStatement prestmnt = null;
         ResultSet rs;
@@ -92,6 +92,27 @@ public class DataAccessor {
         return operationList;
     }
 
+    public void addPatient( Patient newPatient ) throws SQLException {
+        String ap = "INSERT INTO ebdb.patient (PESEL, firstName, lastName) VALUES (?,?,?)";
+        PreparedStatement prestmnt = null;
+        prestmnt = connection.prepareStatement(ap);
+        prestmnt.setString(1, newPatient.getPESEL());
+        prestmnt.setString(2, newPatient.getFirstName());
+        prestmnt.setString(3, newPatient.getLastName());
+        prestmnt.executeUpdate();
+    }
+
+    public void editPatient( Patient afterEditPatient, String oldPESEL ) throws SQLException {
+        String ep = "UPDATE ebdb.patient SET PESEL=?, firstName=?, lastName=? WHERE patient.PESEL = ?";
+        PreparedStatement prestmnt = null;
+        prestmnt = connection.prepareStatement(ep);
+        prestmnt.setString(1, afterEditPatient.getPESEL());
+        prestmnt.setString(2, afterEditPatient.getFirstName());
+        prestmnt.setString(3, afterEditPatient.getLastName());
+        prestmnt.setString(4, oldPESEL);
+        prestmnt.executeUpdate();
+    }
+
     public void removePatient( String deletedPESEL ) throws SQLException {
         String dp = "DELETE FROM ebdb.patient WHERE patient.PESEL = ?";
         PreparedStatement prestmnt = null;
@@ -108,6 +129,28 @@ public class DataAccessor {
         prestmnt.executeUpdate();
     }
 
+    public void addOperation( Operation newOperation, Patient patient ) throws SQLException {
+        String ap = "INSERT INTO ebdb.patient_operation (PESEL, diseaseName) VALUES (?,?)";
+        PreparedStatement prestmnt = null;
+        prestmnt = connection.prepareStatement(ap);
+        prestmnt.setString(1, patient.getPESEL());
+        prestmnt.setString(2, newOperation.getDiseaseName());
+        //prestmnt.setString(3, newPatient.getLastName());
+        prestmnt.executeUpdate();
+    }
+
+    public ObservableList<String> getDisesesList () throws SQLException {
+        String dl = "SELECT diseaseName FROM ebdb.operation";
+        Statement stmnt = connection.createStatement();
+        ResultSet rs;
+        ObservableList<String> diseasesList = FXCollections.observableArrayList();
+        rs = stmnt.executeQuery(dl);
+        while ( rs.next() ) {
+            String diseaseName = rs.getString("diseaseName");
+            diseasesList.add(diseaseName);
+        }
+        return diseasesList;
+    }
     }
 
     // other methods, eg. addPerson(...) etc

@@ -16,10 +16,11 @@ import java.time.LocalDate;
 public class Patient {
     private final StringProperty PESEL;
     private final StringProperty firstName;
-
     private final StringProperty lastName;
-    private final StringProperty adress;
-    private final ObjectProperty<LocalDate> birthDate;
+
+    //private final StringProperty address;
+    private final StringProperty birthDate;
+    //private final ObjectProperty<LocalDate> birthDate;
 
     public Patient() {
         this(null, null, null);
@@ -30,12 +31,17 @@ public class Patient {
         this.lastName = new SimpleStringProperty(lastName);
         this.PESEL = new SimpleStringProperty(PESEL);
 
-        this.adress = new SimpleStringProperty("Waniliowa 12");
-        this.birthDate = new SimpleObjectProperty<LocalDate>(LocalDate.of(1989, 6, 17));
+        //this.address = new SimpleStringProperty("Waniliowa 12");
+        //this.birthDate = new SimpleObjectProperty<LocalDate>(LocalDate.of(1989, 6, 17));
+        this.birthDate = new SimpleStringProperty("");
     }
 
     //same gettery i settery do konca
 
+    public String displayBirthDate() {
+        String ret = PESEL.toString().substring(0,2) + "-" + PESEL.toString().substring(2,4) + "-" + PESEL.toString().substring(4,6);
+        return ret;
+    }
     public String getPESEL() {
         return PESEL.get();
     }
@@ -72,29 +78,40 @@ public class Patient {
         this.lastName.set(lastName);
     }
 
-    public String getAdress() {
-        return adress.get();
-    }
-
-    public StringProperty adressProperty() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress.set(adress);
-    }
-
-    public LocalDate getBirthDate() {
+    public String getBirthDate() {
         return birthDate.get();
     }
 
-    public ObjectProperty<LocalDate> birthDateProperty() {
+    public StringProperty birthDateProperty() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate.set(birthDate);
     }
+//    public String getAdress() {
+//        return adress.get();
+//    }
+//
+//    public StringProperty adressProperty() {
+//        return adress;
+//    }
+//
+//    public void setAdress(String adress) {
+//        this.adress.set(adress);
+//    }
+
+//    public LocalDate getBirthDate() {
+//        return birthDate.get();
+//    }
+//
+//    public ObjectProperty<LocalDate> birthDateProperty() {
+//        return birthDate;
+//    }
+//
+//    public void setBirthDate(LocalDate birthDate) {
+//        this.birthDate.set(birthDate);
+//    }
 
 
 

@@ -60,13 +60,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PatientOverviewController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientOverviewController.java">
+      <file leaf-file-name="OperationOverviewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patientOperation/OperationOverviewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1075">
-              <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
+            <state relative-caret-position="1480">
+              <caret line="121" column="41" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperationEditController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patientOperation/OperationEditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1211">
+              <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2008#2009#0" expanded="true" />
+                <element signature="e#2040#2041#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,16 +89,49 @@
       <file leaf-file-name="Operation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/patientOperation/model/Operation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patientOperation/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="163" column="47" selection-start-line="163" selection-start-column="47" selection-end-line="163" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#1043#1044#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Patient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patientOperation/model/Patient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding>
+                <element signature="e#2203#2204#0" expanded="true" />
+                <element signature="e#2241#2242#0" expanded="true" />
+                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#2322#2323#0" expanded="true" />
+                <element signature="e#2372#2373#0" expanded="true" />
+                <element signature="e#2417#2418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientEditController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientEditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,20 +140,25 @@
       <file leaf-file-name="DataAccessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/patientOperation/DataAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+            <state relative-caret-position="468">
+              <caret line="132" column="88" selection-start-line="132" selection-start-column="88" selection-end-line="132" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1483718398186" expanded="true" signature="1420:1441" ph="select * fro... patient" />
-                <marker date="1483718398186" expanded="true" signature="2066:2200" ph="SELECT * FRO... patient_operation" />
-                <marker date="1483718398186" expanded="true" signature="2066:2234" ph="SELECT * FRO... patient_operation" />
-                <marker date="1483718398186" expanded="true" signature="2582:2618" ph="select * fro... operation" />
-                <marker date="1483718398186" expanded="true" signature="2582:2656" ph="select * fro... operation" />
-                <marker date="1483718398186" expanded="true" signature="2582:2657" ph="select * fro... operation" />
-                <marker date="1483718398186" expanded="true" signature="2582:2660" ph="select * fro... patient_operation" />
-                <marker date="1483718398186" expanded="true" signature="2582:2662" ph="select * fro... patient_operation" />
-                <marker date="1483718398186" expanded="true" signature="3713:3761" ph="DELETE FROM " />
-                <marker date="1483718398186" expanded="true" signature="4042:4107" ph="DELETE FROM " />
+                <marker date="1483746816836" expanded="true" signature="1420:1441" ph="select * fro... patient" />
+                <marker date="1483746816836" expanded="true" signature="2066:2211" ph="SELECT * FRO... patient_operation" />
+                <marker date="1483746816836" expanded="true" signature="2066:2245" ph="SELECT * FRO... patient_operation" />
+                <marker date="1483746816836" expanded="true" signature="2593:2629" ph="select * fro... operation" />
+                <marker date="1483746816836" expanded="true" signature="2593:2667" ph="select * fro... operation" />
+                <marker date="1483746816836" expanded="true" signature="2593:2668" ph="select * fro... operation" />
+                <marker date="1483746816836" expanded="true" signature="2593:2671" ph="select * fro... patient_operation" />
+                <marker date="1483746816836" expanded="true" signature="2593:2673" ph="select * fro... patient_operation" />
+                <marker date="1483746816836" expanded="true" signature="3720:3788" ph="INSERT INTO ebdb.patient... " />
+                <marker date="1483746816836" expanded="true" signature="4212:4292" ph="UPDATE ebdb.... " />
+                <marker date="1483746816836" expanded="true" signature="4218:4268" ph="INSERT INTO ebdb.patient... " />
+                <marker date="1483746816836" expanded="true" signature="4755:4803" ph="DELETE FROM " />
+                <marker date="1483746816836" expanded="true" signature="5084:5149" ph="DELETE FROM " />
+                <marker date="1483746816836" expanded="true" signature="5443:5511" ph="INSERT INTO ebdb.patient_operation... " />
+                <marker date="1483746816836" expanded="true" signature="5917:5955" ph="SELECT disea... operation" />
               </folding>
             </state>
           </provider>
@@ -141,14 +193,18 @@
         <option value="$PROJECT_DIR$/src/patientOperation/sample.fxml" />
         <option value="$PROJECT_DIR$/src/css.css" />
         <option value="$PROJECT_DIR$/src/patientOperation/RootLayout.fxml" />
-        <option value="$PROJECT_DIR$/src/patientOperation/model/Patient.java" />
         <option value="$PROJECT_DIR$/src/patientOperation/model/Opertion.java" />
         <option value="$PROJECT_DIR$/src/patientOperation/PatientDataAccessor.java" />
         <option value="$PROJECT_DIR$/src/patientOperation/PatientOverview.fxml" />
+        <option value="$PROJECT_DIR$/src/patientOperation/PatientOverviewController.java" />
+        <option value="$PROJECT_DIR$/src/patientOperation/PatientEditDialog.fxml" />
+        <option value="$PROJECT_DIR$/src/patientOperation/model/Operation.java" />
         <option value="$PROJECT_DIR$/src/patientOperation/Main.java" />
         <option value="$PROJECT_DIR$/src/patientOperation/DataAccessor.java" />
-        <option value="$PROJECT_DIR$/src/patientOperation/model/Operation.java" />
-        <option value="$PROJECT_DIR$/src/patientOperation/PatientOverviewController.java" />
+        <option value="$PROJECT_DIR$/src/patientOperation/OperationEditController.java" />
+        <option value="$PROJECT_DIR$/src/patientOperation/OperationOverviewController.java" />
+        <option value="$PROJECT_DIR$/src/patientOperation/model/Patient.java" />
+        <option value="$PROJECT_DIR$/src/patientOperation/PatientEditController.java" />
       </list>
     </option>
   </component>
@@ -213,9 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,6 +348,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,8 +369,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ks\Documents\mvcFX7\src\patientOperation" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ks\Downloads\mvcFX7\src\patientOperation" />
       <recent name="C:\Users\ks\Downloads\mvcFX7\src\patientOperation\view" />
@@ -540,27 +600,28 @@
       <workItem from="1483283577072" duration="8248000" />
       <workItem from="1483477123695" duration="4511000" />
       <workItem from="1483641359142" duration="17868000" />
+      <workItem from="1483721349174" duration="22241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43066000" />
+    <option name="totallyTimeSpent" value="65307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23837209" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20251939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20251939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19739583" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19739583" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -597,19 +658,19 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/patientOperation/Main.java</url>
-          <line>87</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/patientOperation/Main.java</url>
-          <line>109</line>
+          <line>176</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/patientOperation/Main.java</url>
-          <line>51</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -619,6 +680,42 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/patientOperation/PatientEditController.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/patientOperation/Main.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/patientOperation/model/Operation.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/patientOperation/OperationOverviewController.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/patientOperation/OperationEditController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/patientOperation/model/Patient.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/patientOperation/DataAccessor.java</url>
           <line>35</line>
@@ -626,22 +723,46 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/patientOperation/OperationOverviewController.java</url>
+          <line>170</line>
+          <properties class="patientOperation.OperationOverviewController" method="handleAddPatient" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/patientOperation/Main.java</url>
+          <line>120</line>
+          <properties class="patientOperation.Main" method="showPatientEditDetail" />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/patientOperation/OperationEditController.java</url>
+          <line>57</line>
+          <properties class="patientOperation.OperationEditController" method="setOperation" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/patientOperation/DataAccessor.java</url>
-          <line>60</line>
-          <properties class="patientOperation.DataAccessor" method="getOperationList" />
-          <option name="timeStamp" value="8" />
+          <line>141</line>
+          <properties class="patientOperation.DataAccessor" method="getDisesesList" />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/patientOperation/Main.java</url>
+          <line>36</line>
+          <properties class="patientOperation.Main" method="getDiseasesList" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/patientOperation/DataAccessor.java</url>
-          <line>102</line>
-          <properties class="patientOperation.DataAccessor" method="removeOperation" />
-          <option name="timeStamp" value="12" />
+          <line>131</line>
+          <properties class="patientOperation.DataAccessor" method="addOperation" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="13" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -650,141 +771,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3305#3306#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3386#3387#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/model/Patient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="85" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientOverview.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="75" selection-start-line="22" selection-start-column="33" selection-end-line="23" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3305#3306#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3386#3387#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3305#3306#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3386#3387#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/css.css" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/collections/FXCollections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -807,28 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/src/mysql-connector-java-5.1.40-bin.jar!/com/mysql/jdbc/Driver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="721" column="0" selection-start-line="721" selection-start-column="0" selection-end-line="721" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -853,57 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientOverview.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1438">
-          <caret line="1980" column="24" selection-start-line="1980" selection-start-column="24" selection-end-line="1980" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3305#3306#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3386#3387#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/model/Patient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/TableColumn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -916,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="468" column="0" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,45 +861,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="9156" column="0" selection-start-line="9156" selection-start-column="0" selection-end-line="9156" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/StringPropertyBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/view/PatientEditDialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientEditDialog.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectPropertyBase.java">
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/OperationOverview.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="732">
+          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/RootLayout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/DoublePropertyBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding>
-            <element signature="e#1722#1723#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="false" />
+            <element signature="e#3997#3998#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectWrapper.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/geometry/Point2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="248">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/input/MouseEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <caret line="586" column="0" selection-start-line="586" selection-start-column="0" selection-end-line="586" selection-end-column="0" />
+          <folding>
+            <element signature="e#22780#22781#0" expanded="false" />
+            <element signature="e#22810#22811#0" expanded="false" />
+            <element signature="e#23078#23079#0" expanded="false" />
+            <element signature="e#23108#23109#0" expanded="false" />
+            <element signature="e#24050#24051#0" expanded="false" />
+            <element signature="e#24079#24080#0" expanded="false" />
+            <element signature="e#25044#25045#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <element signature="e#6567#6568#0" expanded="false" />
+            <element signature="e#6629#6630#0" expanded="false" />
+            <element signature="e#7771#7772#0" expanded="false" />
+            <element signature="e#9738#9739#0" expanded="false" />
+            <element signature="e#9771#9772#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/ParallelCamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="2930" column="0" selection-start-line="2930" selection-start-column="0" selection-end-line="2930" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/OperationEditDialog.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/stage/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="473" column="0" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#202#203#0" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -998,7 +1015,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ReadOnlyIntegerPropertyBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="473">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="e#1665#1666#0" expanded="false" />
@@ -1022,18 +1039,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/SelectionModel.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/TableView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+          <caret line="1000" column="0" selection-start-line="1000" selection-start-column="0" selection-end-line="1000" selection-end-column="0" />
+          <folding>
+            <element signature="e#46988#46989#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/SelectionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/TableView.java">
+    <entry file="jar://$PROJECT_DIR$/src/mysql-connector-java-5.1.40-bin.jar!/com/mysql/jdbc/PreparedStatement.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="1914" column="0" selection-start-line="1914" selection-start-column="0" selection-end-line="1914" selection-end-column="0" />
+        <state relative-caret-position="197">
+          <caret line="1054" column="0" selection-start-line="1054" selection-start-column="0" selection-end-line="1054" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="8413" column="0" selection-start-line="8413" selection-start-column="0" selection-end-line="8413" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1057,57 +1100,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/DataAccessor.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+        <state relative-caret-position="197">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectPropertyBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#1722#1723#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1772" column="0" selection-start-line="1772" selection-start-column="0" selection-end-line="1772" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="163" column="47" selection-start-line="163" selection-start-column="47" selection-end-line="163" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1483718398186" expanded="true" signature="1420:1441" ph="select * fro... patient" />
-            <marker date="1483718398186" expanded="true" signature="2066:2200" ph="SELECT * FRO... patient_operation" />
-            <marker date="1483718398186" expanded="true" signature="2066:2234" ph="SELECT * FRO... patient_operation" />
-            <marker date="1483718398186" expanded="true" signature="2582:2618" ph="select * fro... operation" />
-            <marker date="1483718398186" expanded="true" signature="2582:2656" ph="select * fro... operation" />
-            <marker date="1483718398186" expanded="true" signature="2582:2657" ph="select * fro... operation" />
-            <marker date="1483718398186" expanded="true" signature="2582:2660" ph="select * fro... patient_operation" />
-            <marker date="1483718398186" expanded="true" signature="2582:2662" ph="select * fro... patient_operation" />
-            <marker date="1483718398186" expanded="true" signature="3713:3761" ph="DELETE FROM " />
-            <marker date="1483718398186" expanded="true" signature="4042:4107" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/OperationEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1211">
+          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/patientOperation/model/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patientOperation/view/PatientEditDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/OperationOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1480">
+          <caret line="121" column="41" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/mysql-connector-java-5.1.40-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1667" column="0" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
+          <folding>
+            <marker date="1483304584479" expanded="true" signature="90944:90973" ph="SELECT @@ses... " />
+            <marker date="1483304584479" expanded="true" signature="114256:114271" ph="/* missingVa... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/DataAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="132" column="88" selection-start-line="132" selection-start-column="88" selection-end-line="132" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1483746816836" expanded="true" signature="1420:1441" ph="select * fro... patient" />
+            <marker date="1483746816836" expanded="true" signature="2066:2211" ph="SELECT * FRO... patient_operation" />
+            <marker date="1483746816836" expanded="true" signature="2066:2245" ph="SELECT * FRO... patient_operation" />
+            <marker date="1483746816836" expanded="true" signature="2593:2629" ph="select * fro... operation" />
+            <marker date="1483746816836" expanded="true" signature="2593:2667" ph="select * fro... operation" />
+            <marker date="1483746816836" expanded="true" signature="2593:2668" ph="select * fro... operation" />
+            <marker date="1483746816836" expanded="true" signature="2593:2671" ph="select * fro... patient_operation" />
+            <marker date="1483746816836" expanded="true" signature="2593:2673" ph="select * fro... patient_operation" />
+            <marker date="1483746816836" expanded="true" signature="3720:3788" ph="INSERT INTO ebdb.patient... " />
+            <marker date="1483746816836" expanded="true" signature="4212:4292" ph="UPDATE ebdb.... " />
+            <marker date="1483746816836" expanded="true" signature="4218:4268" ph="INSERT INTO ebdb.patient... " />
+            <marker date="1483746816836" expanded="true" signature="4755:4803" ph="DELETE FROM " />
+            <marker date="1483746816836" expanded="true" signature="5084:5149" ph="DELETE FROM " />
+            <marker date="1483746816836" expanded="true" signature="5443:5511" ph="INSERT INTO ebdb.patient_operation... " />
+            <marker date="1483746816836" expanded="true" signature="5917:5955" ph="SELECT disea... operation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/model/Patient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2241#2242#0" expanded="true" />
+            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="e#2322#2323#0" expanded="true" />
+            <element signature="e#2372#2373#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patientOperation/PatientEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

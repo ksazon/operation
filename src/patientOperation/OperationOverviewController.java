@@ -4,6 +4,7 @@ package patientOperation;
  * Created by ks on 26.12.2016.
  */
 
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -17,13 +18,15 @@ import patientOperation.DataAccessor;
 
 import java.sql.SQLException;
 
-public class PatientOverviewController {
+public class OperationOverviewController {
     @FXML
     private TableView<Patient> patientTable;
     @FXML
     private TableColumn<Patient, String> firstNameColumn;
     @FXML
     private TableColumn<Patient, String> lastNameColumn;
+    @FXML
+    private TableColumn<Patient, String> PESELColumn;
 
     @FXML
     private Label firstNameLabel;
@@ -31,6 +34,8 @@ public class PatientOverviewController {
     private Label lastNameLabel;
     @FXML
     private Label PESELLabel;
+    @FXML
+    private Label birthDateLabel;
 //    @FXML
 //    private Label postalCodeLabel;
 //    @FXML
@@ -53,12 +58,12 @@ public class PatientOverviewController {
 
     // Reference to the main application.
     private Main mainApp;
-    private DataAccessor dataAccessor;
+    //private DataAccessor dataAccessor;
     /**
      * The constructor.
      * The constructor is called before the initialize() method.
      */
-    public PatientOverviewController() {
+    public OperationOverviewController() {
     }
 
     /**
@@ -70,6 +75,7 @@ public class PatientOverviewController {
         // Initialize the person table with the two columns.
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+        PESELColumn.setCellValueFactory(cellData -> cellData.getValue().PESELProperty());
 
         diseaseNameColumn.setCellValueFactory(cellData -> cellData.getValue().diseaseNameProperty());
         deathRateColumn.setCellValueFactory(cellData -> cellData.getValue().deathRateProperty());
@@ -107,11 +113,13 @@ public class PatientOverviewController {
             firstNameLabel.setText( patient.getFirstName() );
             lastNameLabel.setText( patient.getLastName() );
             PESELLabel.setText( patient.getPESEL() );
+            birthDateLabel.setText( patient.displayBirthDate() );
         }
         else {
             firstNameLabel.setText( "" );
             lastNameLabel.setText( "" );
             PESELLabel.setText( "" );
+            birthDateLabel.setText( "" );
         }
     }
 
@@ -156,8 +164,74 @@ public class PatientOverviewController {
         alert.setHeaderText("noga");
         alert.setContentText("nufa");
         alert.showAndWait();
+        operationTable.setItems((mainApp.getOperationData(patientTable.getSelectionModel().getSelectedItem())));
+    }
 
+    @FXML
+    private void handleAddPatient() throws Exception {
+        Patient newPatient = new Patient();
+        boolean okClicked = mainApp.showPatientEditDetail(newPatient);
+        if (okClicked) {
+            //mainApp.getPatientData().add(newPatient);
+            mainApp.addPatient(newPatient);
+            //dataAccessor.addPatient(newPatient);
+            patientTable.setItems(mainApp.getPatientData());
+        }
+    }
 
+    @FXML
+    private void handleEditPatient() throws SQLException, Exception {
+        Patient selectedPatient = patientTable.getSelectionModel().getSelectedItem();
+        String oldPESEL = selectedPatient.getPESEL();
+        if (selectedPatient != null) {
+            boolean okClicked = mainApp.showPatientEditDetail(selectedPatient);
+            if (okClicked) {
+                showPatientDetails(selectedPatient);
+                patientTable.setItems(mainApp.getPatientData());
+                //dataAccessor.editPatient(selectedPatient, oldPESEL);
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(mainApp.getPrimaryStage());
+            alert.setTitle("Brak pacjenta");
+            alert.setHeaderText("Nie został zaznaczony żaden pacjent");
+            alert.setContentText("Zaznacz pacjeta w tabeli");
 
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    private void handleAddOperation() throws Exception {
+        Operation newOperation = new Operation();
+        boolean okClicked = mainApp.showOperationEditDetail(newOperation);
+        if (okClicked) {
+            //mainApp.getPatientData().add(newPatient);
+            mainApp.addOperation(newOperation, patientTable.getSelectionModel().getSelectedItem());
+            //dataAccessor.addPatient(newPatient);
+            operationTable.setItems(mainApp.getOperationData(patientTable.getSelectionModel().getSelectedItem()));
+        }
+    }
+
+    @FXML
+    private void handleEditOperation() throws SQLException, Exception {
+        Operation selectedOperation = operationTable.getSelectionModel().getSelectedItem();
+        Integer oldId = selectedOperation.getId();
+        if (selectedOperation != null) {
+            boolean okClicked = mainApp.showOperationEditDetail(selectedOperation);
+            if (okClicked) {
+                showDiseaseDetails(selectedOperation);
+                patientTable.setItems(mainApp.getPatientData());
+                //dataAccessor.editPatient(selectedPatient, oldPESEL);
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(mainApp.getPrimaryStage());
+            alert.setTitle("Brak operacji");
+            alert.setHeaderText("Nie została zaznaczona żadna operacja");
+            alert.setContentText("Zaznacz operacje w tabeli");
+
+            alert.showAndWait();
+        }
     }
 }
