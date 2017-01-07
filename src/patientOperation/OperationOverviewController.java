@@ -35,7 +35,7 @@ public class OperationOverviewController {
     @FXML
     private Label PESELLabel;
     @FXML
-    private Label birthDateLabel;
+    private Label ageLabel;
 //    @FXML
 //    private Label postalCodeLabel;
 //    @FXML
@@ -113,13 +113,13 @@ public class OperationOverviewController {
             firstNameLabel.setText( patient.getFirstName() );
             lastNameLabel.setText( patient.getLastName() );
             PESELLabel.setText( patient.getPESEL() );
-            birthDateLabel.setText( patient.displayBirthDate() );
+            ageLabel.setText( patient.displayAge() );
         }
         else {
             firstNameLabel.setText( "" );
             lastNameLabel.setText( "" );
             PESELLabel.setText( "" );
-            birthDateLabel.setText( "" );
+            ageLabel.setText( "" );
         }
     }
 
@@ -160,7 +160,7 @@ public class OperationOverviewController {
         mainApp.removeOperation( deletedId );
         Alert alert = new Alert((Alert.AlertType.WARNING));
         alert.initOwner(mainApp.getPrimaryStage());
-        alert.setTitle("dupa");
+        alert.setTitle("aj waj");
         alert.setHeaderText("noga");
         alert.setContentText("nufa");
         alert.showAndWait();

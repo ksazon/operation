@@ -39,8 +39,12 @@ public class Patient {
     //same gettery i settery do konca
 
     public String displayBirthDate() {
-        String ret = PESEL.toString().substring(0,2) + "-" + PESEL.toString().substring(2,4) + "-" + PESEL.toString().substring(4,6);
+        String ret = PESEL.getValue().substring(0,2) + "-" + PESEL.toString().substring(2,4) + "-" + PESEL.toString().substring(4,6);
+
         return ret;
+    }
+    public String displayAge() {
+        return String.valueOf( 2017 - Integer.parseInt( "19" + PESEL.getValue().substring(0,2) ));
     }
     public String getPESEL() {
         return PESEL.get();

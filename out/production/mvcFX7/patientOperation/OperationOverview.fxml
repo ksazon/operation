@@ -63,15 +63,12 @@
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
                                     <Label text="Nazwa choroby" />
                                     <Label text="Umieralność" GridPane.rowIndex="1" />
-                                    <Label text="Data operacji" GridPane.rowIndex="2" />
                                     <Label fx:id="diseaseNameLabel" text="Label" GridPane.columnIndex="1" />
                                     <Label fx:id="deathRateLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                  </children>
                               </GridPane>
                               <ButtonBar layoutX="100.0" layoutY="218.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
