@@ -58,6 +58,14 @@ public class Main extends Application {
         dataAccessor.addOperation(newOperation, patient);
     }
 
+    public void editOperation(Operation editedOperation) throws SQLException { //, Patient patient
+        dataAccessor.editOperation(editedOperation);
+    }
+
+    public void editPatient(Patient editedPatient, String oldPESEL) throws SQLException {
+        dataAccessor.editPatient(editedPatient, oldPESEL);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 

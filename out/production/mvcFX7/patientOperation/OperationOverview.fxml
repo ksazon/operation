@@ -36,11 +36,11 @@
                             <Label text="PESEL" />
                             <Label text="Imie" GridPane.rowIndex="1" />
                             <Label text="Nazwisko" GridPane.rowIndex="2" />
-                            <Label text="Data urodzenia" GridPane.rowIndex="3" />
+                            <Label text="Wiek" GridPane.rowIndex="3" />
                             <Label fx:id="PESELLabel" text="Label" GridPane.columnIndex="1" />
                             <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                             <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                            <Label fx:id="birthDateLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <Label fx:id="ageLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                           </children>
                         </GridPane>
                         <ButtonBar prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">

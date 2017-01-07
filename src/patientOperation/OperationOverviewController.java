@@ -81,7 +81,7 @@ public class OperationOverviewController {
         deathRateColumn.setCellValueFactory(cellData -> cellData.getValue().deathRateProperty());
 
         showPatientDetails(null);
-        //showDiseaseDetails(null);
+        showDiseaseDetails(null);
 
         patientTable.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> showPatientDetails(newValue)));
         patientTable.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
@@ -216,10 +216,13 @@ public class OperationOverviewController {
     @FXML
     private void handleEditOperation() throws SQLException, Exception {
         Operation selectedOperation = operationTable.getSelectionModel().getSelectedItem();
+        //Patient selectedPatient = patientTable.getSelectionModel().getSelectedItem();
+
         Integer oldId = selectedOperation.getId();
         if (selectedOperation != null) {
             boolean okClicked = mainApp.showOperationEditDetail(selectedOperation);
             if (okClicked) {
+                mainApp.editOperation(selectedOperation); //TUTAJ!
                 showDiseaseDetails(selectedOperation);
                 patientTable.setItems(mainApp.getPatientData());
                 //dataAccessor.editPatient(selectedPatient, oldPESEL);

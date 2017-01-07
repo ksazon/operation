@@ -139,6 +139,15 @@ public class DataAccessor {
         prestmnt.executeUpdate();
     }
 
+    public void editOperation( Operation editedOperation ) throws SQLException { //, Patient patient
+        String eo = "UPDATE ebdb.patient_operation SET diseaseName = ? WHERE patient_operation.id = ?";
+        PreparedStatement prestmnt = null;
+        prestmnt = connection.prepareStatement(eo);
+        prestmnt.setString(1, editedOperation.getDiseaseName());
+        prestmnt.setInt(2, editedOperation.getId());
+        prestmnt.executeUpdate();
+    }
+
     public ObservableList<String> getDisesesList () throws SQLException {
         String dl = "SELECT diseaseName FROM ebdb.operation";
         Statement stmnt = connection.createStatement();
