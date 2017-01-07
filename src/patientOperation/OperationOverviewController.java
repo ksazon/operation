@@ -4,17 +4,13 @@ package patientOperation;
  * Created by ks on 26.12.2016.
  */
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import patientOperation.Main;
 import patientOperation.model.Operation;
 import patientOperation.model.Patient;
-import patientOperation.DataAccessor;
 
 import java.sql.SQLException;
 
@@ -36,12 +32,6 @@ public class OperationOverviewController {
     private Label PESELLabel;
     @FXML
     private Label ageLabel;
-//    @FXML
-//    private Label postalCodeLabel;
-//    @FXML
-//    private Label cityLabel;
-//    @FXML
-//    private Label birthdayLabel;
 
     @FXML
     private TableView<Operation> operationTable;
@@ -55,21 +45,11 @@ public class OperationOverviewController {
     @FXML
     private  Label deathRateLabel;
 
-
-    // Reference to the main application.
     private Main mainApp;
-    //private DataAccessor dataAccessor;
-    /**
-     * The constructor.
-     * The constructor is called before the initialize() method.
-     */
+
     public OperationOverviewController() {
     }
 
-    /**
-     * Initializes the controller class. This method is automatically called
-     * after the fxml file has been loaded.
-     */
     @FXML
     private void initialize()throws Exception {
         // Initialize the person table with the two columns.
@@ -94,18 +74,11 @@ public class OperationOverviewController {
         operationTable.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> showDiseaseDetails(newValue)));
     }
 
-    /**
-     * Is called by the main application to give a reference back to itself.
-     *
-     * @param mainApp
-     */
     public void setMainApp(Main mainApp) throws Exception {
         this.mainApp = mainApp;
 
-        // Add observable list data to the table
         patientTable.setItems(mainApp.getPatientData());
         operationTable.setItems(mainApp.getOperationData(null));
-        //patientTable.setEditable(true);
     }
 
     private void showPatientDetails(Patient patient) {
@@ -127,7 +100,6 @@ public class OperationOverviewController {
         if ( operation != null ) {
             diseaseNameLabel.setText( operation.getDiseaseName() );
             deathRateLabel.setText( operation.getDeathRate() );
-            //PESELLabel.setText( patient.getPESEL() );
         }
         else {
             diseaseNameLabel.setText( "" );
@@ -143,15 +115,10 @@ public class OperationOverviewController {
 
     @FXML
     private void handleDeletePatient() throws Exception, SQLException {
-        //dataAccessor = new DataAccessor()
-        //int selectedIndex = patientTable.getSelectionModel().getSelectedIndex();
         String deletedPESEL = patientTable.getSelectionModel().getSelectedItem().getPESEL();
-        //patientTable.getItems().remove(selectedIndex);
         mainApp.removePatient( deletedPESEL );
         patientTable.setItems(mainApp.getPatientData());
         operationTable.setItems(mainApp.getOperationData(null));
-        //patientTable.refresh();
-        //operationTable.refresh();
     }
 
     @FXML
@@ -172,9 +139,7 @@ public class OperationOverviewController {
         Patient newPatient = new Patient();
         boolean okClicked = mainApp.showPatientEditDetail(newPatient);
         if (okClicked) {
-            //mainApp.getPatientData().add(newPatient);
             mainApp.addPatient(newPatient);
-            //dataAccessor.addPatient(newPatient);
             patientTable.setItems(mainApp.getPatientData());
         }
     }
@@ -182,14 +147,15 @@ public class OperationOverviewController {
     @FXML
     private void handleEditPatient() throws SQLException, Exception {
         Patient selectedPatient = patientTable.getSelectionModel().getSelectedItem();
+        //String oldPesel = selectedPatient.getPESEL();
         String oldPESEL = selectedPatient.getPESEL();
         if (selectedPatient != null) {
             boolean okClicked = mainApp.showPatientEditDetail(selectedPatient);
             if (okClicked) {
+                mainApp.editPatient(selectedPatient, oldPESEL);
                 showPatientDetails(selectedPatient);
                 patientTable.setItems(mainApp.getPatientData());
-                //dataAccessor.editPatient(selectedPatient, oldPESEL);
-            }
+             }
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(mainApp.getPrimaryStage());
@@ -206,9 +172,7 @@ public class OperationOverviewController {
         Operation newOperation = new Operation();
         boolean okClicked = mainApp.showOperationEditDetail(newOperation);
         if (okClicked) {
-            //mainApp.getPatientData().add(newPatient);
             mainApp.addOperation(newOperation, patientTable.getSelectionModel().getSelectedItem());
-            //dataAccessor.addPatient(newPatient);
             operationTable.setItems(mainApp.getOperationData(patientTable.getSelectionModel().getSelectedItem()));
         }
     }
@@ -216,16 +180,14 @@ public class OperationOverviewController {
     @FXML
     private void handleEditOperation() throws SQLException, Exception {
         Operation selectedOperation = operationTable.getSelectionModel().getSelectedItem();
-        //Patient selectedPatient = patientTable.getSelectionModel().getSelectedItem();
 
         Integer oldId = selectedOperation.getId();
         if (selectedOperation != null) {
             boolean okClicked = mainApp.showOperationEditDetail(selectedOperation);
             if (okClicked) {
-                mainApp.editOperation(selectedOperation); //TUTAJ!
+                mainApp.editOperation(selectedOperation);
                 showDiseaseDetails(selectedOperation);
                 patientTable.setItems(mainApp.getPatientData());
-                //dataAccessor.editPatient(selectedPatient, oldPESEL);
             }
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);

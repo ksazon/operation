@@ -1,16 +1,14 @@
 package patientOperation.model;
 
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
 import javafx.beans.property.*;
-import javafx.collections.ObservableList;
 
 /**
  * Created by ks on 03.01.2017.
  */
 public class Operation {
-    //private final StringProperty id;
     private final StringProperty diseaseName;
     private final StringProperty deathRate;
     //private final ObjectProperty<LocalDate> operationDate;
@@ -27,18 +25,6 @@ public class Operation {
         this.id = new SimpleIntegerProperty(id);
     }
 
-//    public String getId() {
-//        return id.get();
-//    }
-//
-//    public StringProperty idProperty() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id.set(id);
-//    }
-    //public ObservableList<String> getDisesesList()
     public Integer getId() {
         return id.get();
     }

@@ -25,13 +25,13 @@
             <ComboBox fx:id="diseasesListCombo" prefWidth="150.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
-      <Label layoutX="72.0" layoutY="35.0" text="Dodaj operację" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Label layoutX="72.0" layoutY="35.0" text="Operacja" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Label>
       <ButtonBar layoutX="326.0" layoutY="314.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <buttons>
-          <Button minWidth="73.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" text="Dodaj" />
+          <Button minWidth="73.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" text="Ok" />
             <Button mnemonicParsing="false" onAction="#handleCancel" text="Anuluj" />
         </buttons>
       </ButtonBar>

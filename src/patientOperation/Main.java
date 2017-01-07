@@ -20,14 +20,7 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
-//    private ObservableList<Patient> patientData = FXCollections.observableArrayList();
     private DataAccessor dataAccessor;
-
-//    public Main() {
-//        patientData.add(new Patient("Jarek", "Jaro", "90"));
-//        patientData.add(new Patient("Jarek2", "Jaro", "90"));
-//        patientData.add(new Patient("Jarek3", "Jaro", "90"));
-//    }
 
     public ObservableList<Patient> getPatientData() throws Exception {
         //return patientData;
@@ -58,7 +51,7 @@ public class Main extends Application {
         dataAccessor.addOperation(newOperation, patient);
     }
 
-    public void editOperation(Operation editedOperation) throws SQLException { //, Patient patient
+    public void editOperation(Operation editedOperation) throws SQLException {
         dataAccessor.editOperation(editedOperation);
     }
 
@@ -68,27 +61,25 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        String DRIVER = "com.mysql.jdbc.Driver";
+        String HOST = "jdbc:mysql://aa1usznuujiim25.ckjkyoknuuox.us-west-2.rds.amazonaws.com:3306";
+        String USER = "sazkr";
+        String PASS = "Z8U8pxGW";
+        dataAccessor = new DataAccessor(DRIVER, HOST, USER, PASS);
 
-        dataAccessor = new DataAccessor("com.mysql.jdbc.Driver", "jdbc:mysql://aa1usznuujiim25.ckjkyoknuuox.us-west-2.rds.amazonaws.com:3306", "sazkr", "Z8U8pxGW");
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Patient");
+        this.primaryStage.setTitle("Dziennik operacji");
 
         initRootLayout();
-
         showPatientOverview();
     }
 
-    /**
-     * Initializes the root layout.
-     */
     public void initRootLayout() {
         try {
-            // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
-            // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -97,31 +88,21 @@ public class Main extends Application {
         }
     }
 
-    /**
-     * Shows the person overview inside the root layout.
-     */
     public void showPatientOverview() throws Exception{
         try {
-            // Load person overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("OperationOverview.fxml"));
-            AnchorPane patientOverview = loader.load(); //(AnchorPane) loader.load();
+            AnchorPane patientOverview = loader.load();
 
-            // Set person overview into the center of root layout.
             rootLayout.setCenter(patientOverview);
 
             OperationOverviewController controller = loader.getController();
             controller.setMainApp(this);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    /**
-     * Returns the main stage.
-     * @return
-     */
     public Stage getPrimaryStage() {
         return primaryStage;
     }
@@ -179,7 +160,6 @@ public class Main extends Application {
             return false;
         }
     }
-
 
     public static void main(String[] args) {
         launch(args);

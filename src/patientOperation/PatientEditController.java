@@ -39,6 +39,7 @@ public class PatientEditController {
     public void setDialogStage (Stage dialogStage) {
         this.dialogStage = dialogStage;
     }
+
     @FXML
     public void setPatient (Patient patient) {
         this.patient = patient;
@@ -46,10 +47,8 @@ public class PatientEditController {
         firstNameField.setText(patient.getFirstName());
         lastNameField.setText(patient.getLastName());
         PESELField.setText(patient.getPESEL());
-        //birthDateField.setText(patient.getBirthDate());
-        //birthDateField.setPromptText("dd.mm.yyyy");
     }
-    @FXML  //
+
     public boolean isOkClicked() {
         return okClicked;
     }
@@ -60,9 +59,6 @@ public class PatientEditController {
             patient.setFirstName(firstNameField.getText());
             patient.setLastName(lastNameField.getText());
             patient.setPESEL(PESELField.getText());
-            //patient.setBirthDate(birthDateField.getText());
-
-            //ainApp.addPatient(patient);
 
             okClicked = true;
             dialogStage.close();
@@ -74,7 +70,6 @@ public class PatientEditController {
         dialogStage.close();
     }
 
-    @FXML //
     private boolean isInputValid() {
         String errorMessage = "";
 
@@ -87,9 +82,7 @@ public class PatientEditController {
         if (PESELField.getText() == null || PESELField.getText().length() != 11 ) {
             errorMessage += "Zły format PESEL (11 znaków)\n";
         }
-//        if (birthDateField.getText() == null || birthDateField.getText().length() == 0 ) {
-//            errorMessage += "Podaj imię\n";
-//        }
+
 
         if (errorMessage.length() == 0) {
             return true;

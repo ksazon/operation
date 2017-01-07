@@ -1,11 +1,11 @@
 package patientOperation;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import patientOperation.model.Operation;
 import patientOperation.model.Patient;
-import sun.security.tools.keytool.Resources_sv;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import java.sql.Connection ;
 import java.sql.DriverManager ;
 import java.sql.SQLException ;
@@ -17,10 +17,8 @@ import java.sql.ResultSet ;
  * Created by ks on 01.01.2017.
  */
 
-
 public class DataAccessor {
 
-    // in real life, use a connection pool....
     private Connection connection ;
 
     public DataAccessor(String driverClassName, String dbURL, String user, String password) throws SQLException, ClassNotFoundException {
@@ -42,11 +40,9 @@ public class DataAccessor {
     public ObservableList<Patient> getPatientList() throws SQLException {
         try (
                 Statement stmnt = connection.createStatement();
-                Statement stmnt2 = connection.createStatement();
-                ResultSet rs2 = stmnt2.executeQuery("USE ebdb");
-                ResultSet rs = stmnt.executeQuery("select * from patient");
+                ResultSet rs = stmnt.executeQuery("select * from ebdb.patient");
         ){
-            ObservableList<Patient> patientList = FXCollections.observableArrayList(); //new ArrayList<>();
+            ObservableList<Patient> patientList = FXCollections.observableArrayList();
             while (rs.next()) {
                 String firstName = rs.getString("firstName");
                 String lastName = rs.getString("lastName");
@@ -68,20 +64,14 @@ public class DataAccessor {
             return null;
         }
         try {
-            //Statement stmnt = connection.createStatement();
-            //ResultSet rs = stmnt.executeQuery("select * from ebdb.patient_operation WHERE patient_operation.diseaseName = ino");
             prestmnt = connection.prepareStatement(p);
             prestmnt.setString(1, patient.getPESEL());
             rs = prestmnt.executeQuery();
-            //ResultSet rs = connection.prepareStatement(p);
 
-            //ObservableList<Operation> operationList = FXCollections.observableArrayList(); //new ArrayList<>();
             while (rs.next()) {
                 String diseaseName = rs.getString("diseaseName");
                 String deathRate = rs.getString("deathRate");
                 Integer id = rs.getInt("id");
-//                String date = rs.getString("lastName");
-//                String PESEL = rs.getString("PESEL");
                 Operation operation = new Operation(diseaseName, deathRate, id);
                 operationList.add(operation);
             }
@@ -135,11 +125,10 @@ public class DataAccessor {
         prestmnt = connection.prepareStatement(ap);
         prestmnt.setString(1, patient.getPESEL());
         prestmnt.setString(2, newOperation.getDiseaseName());
-        //prestmnt.setString(3, newPatient.getLastName());
         prestmnt.executeUpdate();
     }
 
-    public void editOperation( Operation editedOperation ) throws SQLException { //, Patient patient
+    public void editOperation( Operation editedOperation ) throws SQLException {
         String eo = "UPDATE ebdb.patient_operation SET diseaseName = ? WHERE patient_operation.id = ?";
         PreparedStatement prestmnt = null;
         prestmnt = connection.prepareStatement(eo);
@@ -160,6 +149,4 @@ public class DataAccessor {
         }
         return diseasesList;
     }
-    }
-
-    // other methods, eg. addPerson(...) etc
+}
